@@ -15,9 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipControl;
 
 - (IBAction)onTap:(id)sender;
-
 - (void)updateValues;
-- (void)onSettingsButton;
 
 @end
 
@@ -33,12 +31,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [self updateValues];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)onTap:(id)sender {
+    [self.view endEditing:YES];
+    [self updateValues];
+}
+
+- (void)updateValues {
+    float billAmount = [self.billTextField.text floatValue];
+    
+    NSArray *tipRatio = @[@(0.10), @(0.15), @(0.20)];
+    
+    float tipAmount = billAmount * [tipRatio[self.tipControl.selectedSegmentIndex] floatValue];
+    float totalAmount = tipAmount + billAmount;
+    
+    self.tipLabel.text = [NSString stringWithFormat:@"%.2f", tipAmount];
+    self.totalBillLabel.text = [NSString stringWithFormat:@"%.2f", totalAmount];
 }
 
 @end

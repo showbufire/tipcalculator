@@ -64,6 +64,9 @@
                         <segment title="15%"/>
                         <segment title="20%"/>
                     </segments>
+                    <connections>
+                        <action selector="onTap:" destination="-1" eventType="valueChanged" id="KSL-Tw-e8q"/>
+                    </connections>
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -74,6 +77,10 @@
             </connections>
             <point key="canvasLocation" x="192.5" y="163.5"/>
         </view>
-        <tapGestureRecognizer id="iZz-Y8-NQI"/>
+        <tapGestureRecognizer id="iZz-Y8-NQI">
+            <connections>
+                <action selector="onTap:" destination="-1" id="MGm-s7-AhU"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>
