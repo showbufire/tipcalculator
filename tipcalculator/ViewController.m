@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SettingsViewController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *billTextField;
@@ -16,6 +17,7 @@
 
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
+- (void)onSettingsButton;
 
 @end
 
@@ -32,6 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self updateValues];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,6 +57,10 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"%.2f", tipAmount];
     self.totalBillLabel.text = [NSString stringWithFormat:@"%.2f", totalAmount];
+}
+
+- (void)onSettingsButton {
+    [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
 }
 
 @end
