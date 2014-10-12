@@ -15,6 +15,7 @@
 		817C545719E8EAA9000D1AB7 /* tipcalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C545619E8EAA9000D1AB7 /* tipcalculatorTests.m */; };
 		817C54F819E8FDE2000D1AB7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C54F719E8FDE2000D1AB7 /* ViewController.xib */; };
 		817C550619EA4659000D1AB7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 817C550519EA4659000D1AB7 /* SettingsViewController.m */; };
+		817C550819EA47E5000D1AB7 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 817C550719EA47E5000D1AB7 /* SettingsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		817C54F719E8FDE2000D1AB7 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		817C550119EA4152000D1AB7 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		817C550519EA4659000D1AB7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		817C550719EA47E5000D1AB7 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				817C550119EA4152000D1AB7 /* SettingsViewController.h */,
 				817C550519EA4659000D1AB7 /* SettingsViewController.m */,
+				817C550719EA47E5000D1AB7 /* SettingsViewController.xib */,
 				817C543E19E8EAA9000D1AB7 /* AppDelegate.h */,
 				817C543F19E8EAA9000D1AB7 /* AppDelegate.m */,
 				817C544119E8EAA9000D1AB7 /* ViewController.h */,
@@ -206,6 +209,7 @@
 				817C544B19E8EAA9000D1AB7 /* LaunchScreen.xib in Resources */,
 				817C54F819E8FDE2000D1AB7 /* ViewController.xib in Resources */,
 				817C544819E8EAA9000D1AB7 /* Images.xcassets in Resources */,
+				817C550819EA47E5000D1AB7 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

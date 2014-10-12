@@ -18,6 +18,7 @@
 - (IBAction)onTap:(id)sender;
 - (void)updateValues;
 - (void)onSettingsButton;
+- (void)loadSettings;
 
 @end
 
@@ -33,6 +34,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadSettings];
     [self updateValues];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStylePlain target:self action:@selector(onSettingsButton)];
 }
@@ -61,6 +63,12 @@
 
 - (void)onSettingsButton {
     [self.navigationController pushViewController:[[SettingsViewController alloc] init] animated:YES];
+}
+
+- (void) loadSettings {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger defaultTip = [defaults integerForKey:@"tipidx"];
+    self.tipControl.selectedSegmentIndex = defaultTip;
 }
 
 @end
